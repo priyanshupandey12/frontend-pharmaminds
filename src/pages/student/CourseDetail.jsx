@@ -20,7 +20,7 @@ const CourseDetail = () => {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/courses/${courseId}`, {
+        const response = await axios.get(`https://backend-pharmaminds.onrender.com/api/v1/courses/${courseId}`, {
           withCredentials: true,
         });
         setCourse(response.data.data);
@@ -36,7 +36,7 @@ const CourseDetail = () => {
   useEffect(() => {
     const checkEnrollment = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/v1/courses/enrolled-courses", {
+        const response = await axios.get("https://backend-pharmaminds.onrender.com/api/v1/courses/enrolled-courses", {
           withCredentials: true,
         });
 
