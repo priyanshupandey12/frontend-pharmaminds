@@ -22,7 +22,7 @@ const LectureViewer = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `http://localhost:3000/api/v1/courses/${courseId}/lectures/${lectureId}`,
+          `https://backend-pharmaminds.onrender.com/api/v1/courses/${courseId}/lectures/${lectureId}`,
           { withCredentials: true }
         );
 
@@ -30,7 +30,7 @@ const LectureViewer = () => {
         
   
         const progressResponse = await axios.get(
-          `http://localhost:3000/api/v1/progress/course-progress/${courseId}`,
+          `https://backend-pharmaminds.onrender.com/api/v1/progress/course-progress/${courseId}`,
           { withCredentials: true }
         );
 
@@ -55,7 +55,7 @@ const LectureViewer = () => {
     try {
       setUpdating(true);
       await axios.post(
-        `http://localhost:3000/api/v1/progress/mark/${courseId}/lectures/${lectureId}`,
+        `https://backend-pharmaminds.onrender.com/api/v1/progress/mark/${courseId}/lectures/${lectureId}`,
         {},
         { withCredentials: true }
       );
@@ -72,7 +72,7 @@ const LectureViewer = () => {
     try {
       setUpdating(true);
       await axios.post(
-        `http://localhost:3000/api/v1/progress/unmark/${courseId}/lectures/${lectureId}`,
+        `https://backend-pharmaminds.onrender.com/api/v1/progress/unmark/${courseId}/lectures/${lectureId}`,
         {},
         { withCredentials: true }
       );
