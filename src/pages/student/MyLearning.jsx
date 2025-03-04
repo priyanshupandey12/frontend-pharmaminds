@@ -13,7 +13,7 @@ const MyLearning = () => {
     const fetchEnrolledCourses = async () => {
       setIsLoading(true)
       try {
-        const response = await axios.get("http://localhost:3000/api/v1/courses/enrolled-courses", {
+        const response = await axios.get("https://backend-pharmaminds.onrender.com/api/v1/courses/enrolled-courses", {
           withCredentials: true,
         });
         setCourses(response.data.enrolledCourses);
