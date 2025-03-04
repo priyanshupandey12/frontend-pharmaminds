@@ -15,7 +15,7 @@ const CourseProgress = () => {
     const fetchCourseProgress = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/v1/progress/course-progress/${courseId}`,
+          `https://backend-pharmaminds.onrender.com/api/v1/progress/course-progress/${courseId}`,
           { withCredentials: true }
         );
 
@@ -40,7 +40,7 @@ const CourseProgress = () => {
     const fetchLectureDetails = async (lectureIds) => {
       try {
         const promises = lectureIds.map((id) =>
-          axios.get(`http://localhost:3000/api/v1/courses/${courseId}/lectures/${id}`, {
+          axios.get(`https://backend-pharmaminds.onrender.com/api/v1/courses/${courseId}/lectures/${id}`, {
             withCredentials: true,
           })
         );
