@@ -188,6 +188,7 @@ const CourseProgress = () => {
 
                       <Link
                         to={`/courses/${courseId}/lectures/${lectureId}`}
+                         state={{ fromCourseProgress: true }}
                         className="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm font-medium flex items-center gap-1 transition-all"
                       >
                         <PlayCircle size={16} /> Watch
