@@ -75,6 +75,8 @@ const Login = () => {
     if(registerIsSuccess && registerData){
       toast.success(registerData.message || "Signup successful.")
       setSignupInput({ firstName: "", lastName: "", email: "", password: "" });
+      dispatch(userApi.util.resetApiState());
+
     }
     if(registerError){
       toast.error(registerError.data.message || "Signup Failed");
