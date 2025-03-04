@@ -18,7 +18,7 @@ const BuyCourseButton = ({ courseId }) => {
               const isCourseEnrolled = enrolledCourses.some((course) => course._id === courseId);
               if (isCourseEnrolled) {
                 alert("✅ Payment Successful! You are now enrolled.");
-                navigate(`/course-detail/${courseId}`); 
+              navigate(`/course-progress/${courseId}`);
               } else {
                 alert("⚠️ Payment success, but course enrollment failed. Please contact support.");
               }
