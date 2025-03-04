@@ -11,7 +11,7 @@ const PurchaseCourseProtectedRoute = ({ children }) => {
   useEffect(() => {
     const checkEnrollment = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/v1/courses/enrolled-courses", {
+        const response = await axios.get("https://backend-pharmaminds.onrender.com/api/v1/courses/enrolled-courses", {
           withCredentials: true,
         });
 
