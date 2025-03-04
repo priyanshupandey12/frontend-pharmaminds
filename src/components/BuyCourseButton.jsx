@@ -11,7 +11,7 @@ const BuyCourseButton = ({ courseId }) => {
     
     const verifyPremiumUser=async()=>{
       try {
-        const enrolledResponse = await axios.get("http://localhost:3000/api/v1/courses/enrolled-courses", {
+        const enrolledResponse = await axios.get("https://backend-pharmaminds.onrender.com/api/v1/courses/enrolled-courses", {
           withCredentials: true,
         });
         const enrolledCourses = enrolledResponse.data.enrolledCourses;
@@ -36,7 +36,7 @@ const BuyCourseButton = ({ courseId }) => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/payment/create-payment",
+        "https://backend-pharmaminds.onrender.com/api/v1/payment/create-payment",
         { courseId }, 
         { withCredentials: true } 
       );
