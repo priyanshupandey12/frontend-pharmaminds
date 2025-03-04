@@ -91,13 +91,9 @@ const LectureViewer = () => {
     }
   };
 
-  const goBackToCourse = () => {
-    if (location.state?.fromCourseProgress) {
-      navigate(`/course-progress/${courseId}`); 
-    } else {
-      navigate(-1);  
-    }
-  };
+const goBackToCourse = () => {
+  navigate(`/course-progress/${courseId}`);
+};
 
   if (loading) {
     return (
