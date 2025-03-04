@@ -124,7 +124,7 @@ const MobileNavbar = ({ user, logoutHandler, isAuthenticated }) => {
             </SheetTrigger>
             <SheetContent className="flex flex-col">
                 <SheetHeader className="flex flex-row items-center justify-between mt-2">
-                    <SheetTitle>Pharmaminds</SheetTitle>
+                <Link to='/'><SheetTitle>Pharmaminds</SheetTitle></Link> 
                     <DarkMode />
                 </SheetHeader>
                 <nav className="flex flex-col space-y-4 mt-4">
