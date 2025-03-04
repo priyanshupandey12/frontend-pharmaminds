@@ -25,7 +25,7 @@ const SearchPage = () => {
     setError(null);
   
     try {
-      let apiUrl = 'http://localhost:3000/api/v1/courses/search?';
+      let apiUrl = 'https://backend-pharmaminds.onrender.com/api/v1/courses/search?';
     
   
       const response = await axios.get(apiUrl, {
