@@ -16,7 +16,7 @@ const Profile = () => {
   const [profilePicture, setProfilePicture] = useState("");
   const { data, isLoading, refetch } = useLoadUserQuery();
   const [updateUser, { updateUserdata, updateUserIsLoading, isError, isSuccess, error }] = useUpdateUserMutation();
-  console.log("User Profile Data:", data?.userProfile);
+
   const changeHandler = (e) => {
     const file = e.target.files?.[0];
     if (file) setProfilePicture(file);
